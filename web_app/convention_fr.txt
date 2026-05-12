@@ -1,0 +1,10 @@
+L'application HydroGEGDP est une version d'une application de gestion de données hydrologiques. Elle a été développée par la société Vai-Natura pour le service hydrologie du Groupement d'Etude et de Gestion du Domaine Public (GEGDP) - Direction de l'équipement de la Polynésie française. 
+
+DROITS DE PROPRIETE
+----------------
+HydroGEGDP a été développé conformément à une convention contractuelle entre la société Vai-Natura et le Ministère de l'équipement de Polynésie française. Son utilisation est exclusivement réservée à la cellule hydrologie du GEGDP. L'application ne peut être ni utilisé ni faire l'objet d'un échange commercial avec une autre entité que la cellule hydrologie du GEGDP sans autorisation préalable de la société Vai-Natura.
+Toute utilisation de l'application en dehors des préconisations faites par la société Vai-Natura peut entrainer des dysfonctionnements. Vai-Natura ne pourra être tenue responsable de ces dysfonctionnements.
+
+MAINTENANCE
+----------------
+La maintenance de l'application est consécutive à des convenions annuelles signées entre le territoire de la Polynésie française et la société Vai-Natura. En dehors de ce cadre, la société Vai-Natura n'a aucune obligation pour corriger le code source de l'application. 

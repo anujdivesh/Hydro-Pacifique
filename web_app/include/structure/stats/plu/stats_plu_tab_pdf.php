@@ -1,0 +1,233 @@
+<?php
+/*  
+----------------------------------------
+Copyright (c) 2015 - Vai-Natura
+----------------------------------------
+*/
+for($ms=1;$ms<=12;$ms++){$tab_sum[$ms]=0;$tab_nb_day_v[$ms]=0;$tab_max[$ms]=0;$tab_min[$ms]=0;}
+
+
+$edition .= "<div id='box_graph' class='gd'>";
+			
+	$edition .= "<div style='width:100%;margin-top:30px;border-bottom:1px solid #336699;'></div>";
+	$edition .= "<h2>".htmlaccent('Année '.$y.' - Précipitations journalières (mm)')."</h2>";
+	//$edition .= "<hr><div style='width:100%;margin-top:30px;border-bottom:1px solid #336699;'></div>";
+					
+	$edition .= "<hr><hr>";
+	
+	$edition .= "<table id='stats_tab' cellspacing='0'>";
+	
+		$edition .= "<tr>";
+			$edition .= "<td class='top'>&nbsp;</td>";
+			
+			for($m=0;$m<sizeof($tab_mois);$m++)
+			{
+				$edition .= "<td class='top'>".$tab_mois[$m]."</td>";
+			}
+			
+		$edition .= "</tr>";
+		
+		$edition .= "<tr><td>&nbsp;</td></tr>";
+			
+		
+		$verif_lac_jb=false;
+		for($d=1;$d<=31;$d++)
+		{
+			$style='';
+			if($d%2==0){$style = "style='background-color:#E4E4E4;'";}
+			
+			$dd = $d;
+			if($d<10){$dd="0".$d;}
+			
+			$edition .= "<tr>";
+				$edition .= "<td  class='bold'>".$dd."</td>";
+				for($m=0;$m<sizeof($tab_mois);$m++)
+				{
+					$mm=$m+1;
+					if($mm<10){$mm="0".$mm;}
+					
+					$date_day = $y."-".$mm."-".$dd;
+					$date_day_lac = $y.$mm.$dd;
+					
+					// verif lacune
+					$verif_lac=false;
+					if($lacune_load)
+					{
+						
+						for($dl=0;$dl<sizeof($data_list_lacunes);$dl++)
+						{
+							$date_deb = str_replace('-','', datefr_us($data_list_lacunes[$dl]['date_deb']));
+							$date_fin = str_replace('-','', datefr_us($data_list_lacunes[$dl]['date_fin']));
+							
+							if($date_day_lac>=$date_deb && $date_day_lac<=$date_fin){$verif_lac=true;}
+						}
+					}
+					
+					$style_td = $style;
+					if($date_day == datefr_us($date_max)){$style_td = "style='width: 15px;background-color:#fa7d72;'";}
+					
+					$edition .= "<td ".$style_td.">";
+						
+						if(isset($data_pluvio[$date_day]))
+						{
+							if($verif_lac){$edition .= "<span style='color:#0251c7;'>(";}
+							
+							$tab_sum[$m+1]+=$data_pluvio[$date_day]['qte_plu_lac'];
+							$edition .= round($data_pluvio[$date_day]['qte_plu_lac'],1);
+							
+							if($verif_lac){$edition .= ")</span>";}
+							
+							if($tab_max[$m+1] < round($data_pluvio[$date_day]['qte_plu_lac'])){$tab_max[$m+1]=round($data_pluvio[$date_day]['qte_plu_lac'],1);}
+	
+							if($tab_min[$m+1] == 0){$tab_min[$m+1]=round($data_pluvio[$date_day]['qte_plu_lac'],1);}
+							if($tab_min[$m+1] > round($data_pluvio[$date_day]['qte_plu_lac'])){$tab_min[$m+1]=round($data_pluvio[$date_day]['qte_plu_lac'],1);}
+
+							
+							$tab_nb_day_v[$m+1]++;
+						}
+						else
+						{
+							$edition .= "-";
+						}
+					
+					$edition .= "</td>";
+				}
+				$edition .= "<td class='bold' style='width: 50px;'>".$dd."</td>";
+			$edition .= "</tr>";
+		}
+		
+		$edition .= "<tr><td>&nbsp;</td></tr>";
+		
+		// Cumul
+		
+		$edition .= "<tr>";
+			$edition .= "<td class='top' style='background-color:#E5ECF9;width:50px;'>Cumul</td>";
+			
+			for($m=1;$m<=12;$m++)
+			{
+				if($tab_nb_day_v[$m] > 0)
+				{
+					$edition .= "<td class='top' style='background-color:#E5ECF9;'>".round($tab_sum[$m],1)."</td>";
+				}
+				else{$edition .= "<td class='top' style='background-color:#E5ECF9;'>-</td>";}	
+			}
+			
+			$edition .= "<td class='top' style='background-color:#E5ECF9;width:50px;'>Cumul</td>";
+			
+		$edition .= "</tr>";
+		
+		// Cumul Résumé
+		
+		$edition_page1 .= "<tr>";
+			$edition_page1 .= "<td class='bold'  style='width:50px;'>".$y."</td>";
+			
+			for($m=1;$m<=12;$m++)
+			{
+				if($tab_nb_day_v[$m] > 0)
+				{
+					$edition_page1 .= "<td ".$style_resume.">".round($tab_sum[$m],1)."</td>";
+				}
+				else{$edition_page1 .= "<td ".$style_resume.">-</td>";}	
+			}
+			
+			$edition_page1 .= "<td class='bold' style='width:50px;'>".$y."</td>";
+			
+		$edition_page1 .= "</tr>";
+		
+		// Moyenne
+		
+		$edition .= "<tr>";
+			$edition .= "<td class='top' style='border-top:none;width:50px;'>Moy</td>";
+			
+			for($m=1;$m<=12;$m++)
+			{
+				if($tab_nb_day_v[$m] > 0)
+				{
+					$edition .= "<td class='top' style='border-top:none;'>".round($tab_sum[$m]/$tab_nb_day_v[$m],1)."</td>";
+				}
+				else{$edition .= "<td class='top' style='border-top:none;'>-</td>";}	
+			}
+			
+			$edition .= "<td class='top' style='border-top:none;width:50px;'>Moy</td>";
+			
+		$edition .= "</tr>";	
+		
+		// Maximum
+		
+		$edition .= "<tr>";
+			$edition .= "<td class='top' style='border-top:none;background-color:#E5ECF9;width:50px;'>Max</td>";
+			
+			for($m=1;$m<=12;$m++)
+			{
+				if($tab_nb_day_v[$m] > 0)
+				{
+					$edition .= "<td class='top' style='border-top:none;background-color:#E5ECF9;'>".$tab_max[$m]."</td>";
+				}
+				else{$edition .= "<td class='top' style='border-top:none;background-color:#E5ECF9;'>-</td>";}	
+			}
+			
+			$edition .= "<td class='top' style='border-top:none;background-color:#E5ECF9;width:50px;'>Max</td>";
+			
+		$edition .= "</tr>";
+		
+		
+		// Minimum
+		
+		$edition .= "<tr>";
+			$edition .= "<td class='top' style='border-top:none;width:50px;'>Min</td>";
+			
+			for($m=1;$m<=12;$m++)
+			{
+				if($tab_nb_day_v[$m] > 0)
+				{
+					$edition .= "<td class='top' style='border-top:none;'>".$tab_min[$m]."</td>";
+				}
+				else{$edition .= "<td class='top' style='border-top:none;'>-</td>";}	
+			}
+			
+			$edition .= "<td class='top' style='border-top:none;width:50px;'>Min</td>";
+			
+		$edition .= "</tr>";
+		
+		
+		
+		$edition .= "<tr><td>&nbsp;</td></tr>";
+		
+		$edition .= "<tr>";
+			$edition .= "<td style='font-weight:bold;'>&nbsp;</td>";
+			for($m=0;$m<sizeof($tab_mois);$m++)
+			{
+				$edition .= "<td style='font-weight:bold;'>".$tab_mois[$m]."</td>";
+			}
+			
+		$edition .= "</tr>";
+		
+		
+			
+			
+			
+	$edition .= "</table>";
+
+	$edition .= "<hr><hr><hr>";	
+
+	if($lacune_load)
+	{
+		$edition .= "<table style='text-align:left;'>";
+			$edition .= "<tr><td>".htmlaccent('Les informations en bleu, entre parenthèses ou signaler par (+) ont fait l‘objet d‘une correction (lacune).')."</td></tr>";
+			$edition .= "<tr><td>".htmlaccent('La pluviométrie journalière maximum est indiquée en rouge.')."</td></tr>";
+		$edition .= "</table>";		
+	}
+	else
+	{
+		$edition .= "<table style='text-align:left;'>";
+			//$edition .= "<tr><td>".htmlaccent('Les informations en bleu, entre parenthèses ou signaler par + ont fait l\'objet d\'une correction (lacune).')."</td></tr>";
+			$edition .= "<tr><td>".htmlaccent('La pluviométrie journalière maximum est indiquée en rouge.')."</td></tr>";
+		$edition .= "</table>";		
+	}
+	
+	
+$edition .= "</div>";
+//echo $edition;
+
+
+?>

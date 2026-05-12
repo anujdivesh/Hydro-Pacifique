@@ -1,0 +1,4 @@
+Bancarisation et Consultations de données hydrologiques.
+--
+Cette plateforme permet la bancarisation, la consultation et la valorisation de données relatives au suivi de la ressource en eau :
+pluviométrie, limnimétrie et débitmétrie, piézométrie.

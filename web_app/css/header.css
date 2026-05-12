@@ -1,0 +1,294 @@
+/*  
+----------------------------------------
+Copyright (c) 2024 - Vai-Natura
+----------------------------------------
+*/
+
+#bando
+{	
+	position:fixed;
+	
+	width: 100%;
+	height: 55px;
+	top:0;
+	
+	/*background-color:#FFD95A;*/
+	/*background-color:#EBA83A;*/
+	box-shadow: 5px 20px 38px -27px #232323;
+	
+	z-index: 1400;	
+}
+
+#bando.log
+{	
+	width: 100%;
+	height: 15px;
+	
+	border-bottom: 10px solid #000;
+	background-color:#000;
+
+	/*
+	padding-top:30px;
+	padding-left:15px;
+	font-size:30px;
+	text-align: left;
+	color:#fff;
+	*/
+	/*
+	background-image: url(../image/header.png);
+	background-repeat:repeat-x;
+	*?
+	/*background-repeat:no-repeat;*/
+	
+}
+
+#bando img
+{	
+	float: left;
+	
+	margin-left:18px;
+	margin-top:0px;
+	text-align:center;
+}
+
+
+
+#nav_icon
+{		
+	float: right;
+
+	/*width: 350px;*/
+	margin-top: 15px;
+}
+
+#nav_icon .close
+{		
+	float: left;
+	
+	width: 30px;
+	height: 25px;
+	
+	margin-right: 10px;
+	
+	background-image: url(../image/icones/close.png);
+	background-size: contain;
+	background-repeat:no-repeat;
+}
+
+#nav_icon .gestion
+{		
+	float: left;
+	
+	width: 40px;
+	height: 25px;
+	
+	background-image: url(../image/icones/admin.png);
+	background-size: contain;
+	background-repeat:no-repeat;
+} 
+
+#nav_icon .mdp
+{		
+	float: left;
+	
+	width: 40px;
+	height: 25px;
+	
+	background-image: url(../image/icones/mdp.png);
+	background-size: contain;
+	background-repeat:no-repeat;
+} 
+
+#nav_icon .view
+{		
+	float: left;
+
+	width: 40px;
+	height: 25px;
+	
+	background-image: url(../image/icones/view.png);
+	background-size: contain;
+	background-repeat:no-repeat;
+}
+
+
+#top_center
+{		
+	float: left;
+
+	/*width: 40%;*/
+
+	margin-top: 18px;
+	margin-left: 2%;
+
+	font-size:18px;
+	text-align: center;
+}
+
+
+
+/*
+------------------------------
+navigations
+------------------------------
+*/
+
+#col
+{
+	/*position: fixed;*/
+	float:left;
+	max-height: 90vh;  /*La hauteur maximale qui s'adapte à la fenêtre */
+  	overflow-y: auto;
+		
+	/*width: 9.5%;*/
+	width: 170px;
+	margin-left: 5px;
+	/*margin-top: 65px;*/
+}
+
+#nav_col
+{	
+	width:155px;
+	text-align:left;
+}
+
+#nav_col2
+{
+	width: 100%;
+	height:100%;
+	
+	-moz-border-radius: 0 0 10px  0;
+	border-radius: 0 0 10px  0;
+	-khtml-border-radius:  0 0 10px  0;
+	-webkit-border-radius:  0 0 10px  0;
+	
+}
+
+
+#menu
+{		
+	margin-left:2px;
+	margin-top:15px;
+	padding: 0px 1%;	
+}
+
+#menu a
+{
+	font-size:11px;
+	/*color:#054b96;*/
+}
+
+#menu a:hover
+{
+	font-size:11px;
+	color:#000;
+	/*color:#054b96;*/
+}
+
+#menu img
+{
+	width:10px;
+	margin-right:5px;
+}
+
+/*
+------------------------------
+navigations
+------------------------------
+*/
+
+.arrow 
+{
+	float:right;
+}
+
+.toggle-header, .calc-toggle-header
+{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calc-toggle-header
+{
+    width:100%;
+	margin:10px 0;
+
+	font-size:14px;
+}
+
+
+	
+.navigation, .calc-navigation
+{		
+	float:left;
+	width: 100%;
+	
+	margin-bottom:10px;
+
+	overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+
+
+.navigation ul /* Liste */     
+{
+	width:100%;
+	padding : 0; /* pas de marge intérieure */
+	margin : 0; /* ni extérieure */
+
+	line-height : 21px; /* on définit une hauteur pour chaque élément */
+	list-style : none; /* on supprime le style par défaut de la liste */
+	text-align : center; /* on centre le texte qui se trouve dans la liste */
+
+	font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+	font-size: 11px;
+	color: #000;				
+}
+
+
+.navigation li /* éléments des listes */      
+{
+	
+	margin-left:18px;
+	text-align : left; 
+}
+
+
+.navigation li a /* Contenu des listes */
+{		
+	padding : 0; /* aucune marge intérieure */   
+	
+	font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+	font-size: 11.2px;
+	text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+		
+}
+
+/* Lorsque la souris passe sur un des liens */
+.navigation li a:hover{color: #930000;}
+
+.navigation li.simple{margin-left:10px;margin-bottom:5px;color : #b5b5b5;}
+.navigation li.simple a{color : #000;}	
+.navigation li.simple a:hover{color: #930000;}
+
+.navigation li.simple img
+{
+	width:10px;
+	margin:0;
+	margin-right:5px;
+}
+
+
+
+
+/*.navigation p, .navigation img{text-align: center;}*/
+.navigation p.next{color:#999;}
+.navigation img{width: 80px;}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body .navigation li
+{
+	border-right: 1px solid transparent ; /* on met une bordure transparente à droite de chaque élément */
+}

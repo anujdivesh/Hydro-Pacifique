@@ -1,0 +1,28 @@
+/*************************************************************************/   
+/*    			     Manutea Tahiti - Site   			 */      
+/* 				Open Source                              */
+/*************************************************************************/
+/* Copyright (c) 2007 Poe.net developer  				 */
+/*************************************************************************/
+/*************************************************************************/
+
+#index li
+{
+ 	float: left;
+ 	margin-right: 30px;
+ 	margin-bottom: 40px;
+ 	
+ 	width: 380px;
+ 	height: 50px;
+}
+
+
+#index li h1{width: 300px;}
+
+#index li img{margin: 0px;}
+
+
+
+/* liens */
+#index a:hover
+{text-decoration: none;}

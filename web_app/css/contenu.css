@@ -1,0 +1,340 @@
+/*  
+----------------------------------------
+Copyright (c) 2024 - Vai-Natura
+----------------------------------------
+
+-------------------
+ CONTENU GENERAL 
+-------------------
+*/
+
+#contenu_centre
+{
+	float: right;
+	width: 99%;
+
+	padding: 0;
+	margin: 0;
+}
+
+#contenu_centre.print
+{
+	width: 98%;
+	margin: 0px;
+	border: none;
+}
+
+#contenu_centre p.info
+{	
+	color: #f19d86;
+} 
+
+/* Affichage Infos boite jaune En haut */
+#contenu_info
+{		
+	position: fixed;
+	display: block;
+	
+	top: 10%;
+	left: 50%;
+    transform: translateX(-50%);
+	
+	padding: 15px 20px;
+	font-size: 14px;
+	font-weight:bold;
+	text-align:left;
+	
+	color:#000;
+	background-color:#fff1a8;
+
+	border: 4px solid #930000;
+	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+	z-index: 2000;	
+} 
+
+
+#contenu_option
+{	
+	float:left;
+	width:100%;	
+
+	font-size: 13px;
+	
+	background-color:#EFF5F1;
+	
+	border-radius: 5px;
+}
+
+#contenu_option img
+{	
+	width:13px;
+	margin-right: 5px;	
+}
+
+
+#contenu_plus
+{	
+	float:left;
+	width: 350px;
+
+	font-size:20px;
+} 
+
+
+.contenu_plus
+{	
+	text-align:center;
+	font-size:20px;
+	font-weight:bold;
+} 
+
+
+/* 
+-----------------------
+CONTENU CENTRE TRI 
+-----------------------
+*/
+
+#contenu_tri
+{
+	float:left;
+	width: 100%;
+  	margin-top:5px;
+  	margin-bottom:10px;
+	margin-left:10px;
+}
+
+#contenu_tri form
+{
+	float: left;
+	font-size: 13px;
+}
+
+#contenu_tri span
+{
+	float: left;
+	margin-top:5px;
+}
+
+#contenu_tri img
+{
+	width:25px;
+	float:left;
+
+	cursor:pointer;
+}
+
+
+/* 
+-----------------------
+CONTENU CENTRE INFOS 
+-----------------------
+*/
+
+#contenu_infos
+{
+	float:left;
+	width:90%;
+	padding:2% 0;
+	padding-left:8px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+
+	border-radius: 8px;	
+	background-color:#f3efb0;
+}
+#contenu_infos_load, #contenu_download
+{
+	float:left;
+	width:40%;
+	padding:2px 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	border-radius: 4px;	
+	border: 1px solid #000;
+}
+
+#contenu_infos p
+{
+	margin-top: 5px;
+	
+	text-align:left;
+	font-weight:bold;
+}
+#contenu_search span{margin-top:2px;}
+
+/* 
+-----------------------
+CONTENU CENTRE SEARCH
+-----------------------
+*/
+
+#contenu_search
+{
+	float:right;
+	width:340px;
+}
+
+#contenu_search span{float:left;margin-top:6px;}
+#contenu_search form{float:left;}
+
+
+/* 
+----------------------
+CONTENU CENTRE SAISI
+-----------------------
+*/
+
+
+#contenu_saisi
+{
+	float:left;
+	width: 300px;
+}
+
+#contenu_saisi span{float:left;margin-top:6px;margin-right:5px;}
+#contenu_saisi form{float:left;}
+
+
+/* 
+-----------------------
+AFFICHE COMMENTAIRES 
+------------------------
+*/
+
+#contenu_centre table#comment
+{
+	width: 500px;
+	text-align: left;
+	font-size: 11px;
+}
+
+
+#contenu_centre table#comment td
+{
+	text-align: left;
+	padding: 10px 0;
+}
+
+
+
+#contenu_centre table#comment td.info
+{
+	width: 150px;
+	font-weight: normal;
+}
+
+#contenu_centre table#comment td.contenu{color: #f19d86;}
+
+/* 
+------------------------
+AFFICHE LISTE 
+------------------------
+*/ 
+
+#contenu_centre ul.year
+{
+	float: left;
+	list-style-type: none;	
+
+	width: 100%;
+	height: 27px; 
+
+	padding: 0px;
+}
+
+
+#contenu_centre li.select_y, li.select_n
+{
+	float: left;
+	width: 85px;
+	height: 20px;
+
+	margin-right: 40px;
+	margin-bottom: 30px;
+	padding-top: 7px; 
+
+	text-align:center;
+	font-weight:bold;
+	font-size: 14px;
+	letter-spacing:1px;
+
+	background-image:url(../image/form/grey_button.png);
+}
+
+#contenu_centre li.select_y{background-image:url(../image/form/grey_button_dark.png);}
+#contenu_centre li.select_y a{color:#FFFFFF;}
+#contenu_centre li.select_y a:hover{text-decoration:none;}
+
+
+/* 
+-------------------
+BOXES CONTENT 
+-------------------
+*/
+
+#contenu_box
+{
+	float: left;
+	width:8%;
+	margin-right:0px;
+}
+
+#contenu_box p{margin-bottom:5px;}
+
+#contenu_box a
+{
+	font-size: 11px;
+	font-weight:normal;	
+	color:#666666;
+}
+
+#contenu_box a:hover{color: #09886d;text-decoration:none;}
+
+#contenu_box2
+{
+	float: left;
+	width:99.5%;
+}
+
+/*
+-------------------
+BOX RESULT
+-------------------
+*/
+
+#box_result
+{
+	float: left;
+	width: 90%;
+	margin-left: 0px;
+	margin-bottom: 20px;
+	
+	padding: 15px;
+
+	-moz-border-radius: 0 0 5px  0;
+	border-radius: 0 0 5px  0;
+	-khtml-border-radius:  0 0 5px  0;
+	-webkit-border-radius:  0 0 5px  0;
+
+	border: 3px solid #15151d;
+}
+
+
+#box_result table
+{
+	margin: 10px;
+}
+
+#box_result td.info
+{
+	font-weight:bold;	
+}

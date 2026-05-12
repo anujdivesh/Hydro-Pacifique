@@ -1,0 +1,357 @@
+/*  
+----------------------------------------
+Copyright (c) 2024 - Vai-Natura
+----------------------------------------
+*/
+
+/* Onglets */
+#onglet
+{
+	width: 99%;
+	margin: 0;
+	text-align:center;
+}
+
+#onglet_contenu a
+{
+	font-weight: normal;
+	font-size:11px;
+	color:#0078A8;
+}
+#onglet_contenu a:hover{color:#930000;}
+#del span:hover{color: #930000;}
+
+#onglet ul#menu_onglet 
+{
+	list-style-type: none;	
+	
+	height: 19px; 
+	
+	margin: 0px;
+	padding: 0px;
+	
+	border: 0px;
+}
+
+
+#onglet_contenu
+{	
+	margin-top: 0px;
+	margin-bottom: 10px;
+
+}
+#onglet_contenu.first
+{
+	margin-top:10px;
+	margin-bottom: 0px;
+}
+
+
+#onglet_contenu p
+{	
+	margin-bottom: 20px;
+
+	font-size:11px;
+	text-align:justify;
+	
+	color: #999999;
+}
+
+#onglet_contenu p.titre_box
+{	
+	font-size:15px;
+	margin-bottom:5px;
+	line-height: 20px;
+
+	color: #000;
+	font-weight: bold;
+}
+
+#onglet_contenu p.titre_box a
+{	
+	color: #000;
+	font-weight: bold;
+}
+#onglet_contenu p.titre_box a:hover{color:#DD4B39;}
+
+
+#boite_lgt{margin: 20px 0;}
+#boite_new{margin-top: 30px;}
+#boite_small, .boite_small{float:left;margin-right: 20px;}
+
+
+
+#boite1
+{	
+	margin: 0 20px;
+	margin-bottom: 20px;
+	text-align:left;
+}
+#boite1.first{margin-top:20px;}
+#boite1.boxpopup
+{
+	float: left;
+	/*width : 500px;*/
+	
+	margin-top:20px;
+	border: 1px solid #2573BB;
+}
+
+
+#boite1 img{width:10px;margin-right:10px;}
+
+
+
+#boite_info{margin: 20px 0;}
+#boite_info p
+{
+	float: left;
+	width: 70px;
+	margin-top: 4px;
+	
+	font-size:11px;
+	font-weight:bold;
+}
+
+#pass_info {display:none;}
+#pass_info p{color:#C33;font-size:11px;}
+
+
+
+#boite_media
+{	
+	margin-bottom: 30px;
+}
+#boite_media img
+{	
+	float: left;	
+	margin-bottom: 0px;	
+	border: 1px solid #000;
+}
+#boite_media img.del
+{	
+	float: left;	
+	border: 0px;
+	margin-left: 10px;
+	cursor:pointer;
+}
+
+/* Ajout Media */
+
+#boite_media input.file
+{	
+	margin: 0px;
+	margin-right: 40px;
+}
+
+
+/* Style pour Photos en galerie */
+#cadre_photo
+{
+	float: left;
+	width: 350px;	
+
+	margin-top: 15px;
+	margin-right: 15px;
+
+	
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 5px 20px 38px -27px #232323;
+}
+
+#cadre_photo #cadre_img
+{
+	position: relative;
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+	
+	width: 100%;	
+	height:280px;
+	
+	/*
+	border: 1px solid #000;
+	background-color:#fff;
+	*/
+}
+
+#cadre_photo img
+{
+	float: left;
+	
+	max-width: 100%;	
+	max-height:90%;	
+    
+	width: auto;
+    height: auto;
+
+	margin:0;
+}
+
+#cadre_photo span
+{
+	font-weight:bold;
+	font-size:12px;
+
+	color:#000;	
+	cursor:none;
+}
+
+#cadre_photo #cadre_text
+{
+	float: left;
+	width: 93%;
+
+	margin-top:-5px;
+	margin-bottom:10px;
+	margin-left:10px;
+
+
+	padding: 0;
+	color:#000;
+	
+	/*
+	background-color:#fff;
+	
+	border: 1px solid #000;
+	border-top: none;
+	*/
+}
+
+#cadre_photo p
+{
+	margin:0;
+	color:#000;
+}
+
+
+
+
+/* Liste */
+
+
+#onglet ul#menu_onglet li
+{	
+	float: left;
+	
+	width: 120px;
+	
+	height: 20px; 
+	
+	margin-right:20px;
+	padding: 0px 15px;
+	padding-top: 10px;
+	color: #003366;
+	font-size: 11px;
+
+	cursor:pointer;
+	border: 1px solid #003366;
+
+	-moz-border-radius: 2px 2px 0 0;
+	border-radius:2px 2px 0 0;
+	-khtml-border-radius: 2px 2px 0 0;
+	-webkit-border-radius: 2px 2px 0 0;
+	
+	border-bottom:0px;
+
+}
+
+#onglet ul#menu_onglet img 
+{	
+	width: 12px;
+	padding-top: 2px;
+}
+
+
+
+
+#onglet ul#menu_onglet li.actif 
+{
+	color:#fff;
+	background-color:#003366;
+}
+
+#onglet ul#menu_onglet li:hover 
+{
+	
+	color:#fff;
+	background-color:#003366;
+}
+
+/* Contenu des onglets */
+
+/*
+#onglet .contenu_top
+{
+	width: 790px;
+	height: 4px;
+	
+	background-image: url(../image/cadres/onglet_top.png);
+	background-repeat: no-repeat;
+}
+
+#onglet .contenu_bottom
+{
+	width: 790px;
+	height: 4px;
+	
+	background-image: url(../image/cadres/onglet_bottom.png);
+	background-repeat: no-repeat;
+}
+*/
+
+#onglet .contenu
+{
+	width: 100%;
+	margin-top: 12px;
+	font-size:12px;
+
+	border: 1px solid #003366;
+	
+	-moz-border-radius: 0 2px 2px 2px;
+	border-radius: 0 2px 2px 2px;
+	-khtml-border-radius: 0 2px 2px 2px;
+	-webkit-border-radius: 0 2px 2px 2px;
+	
+	background-color: #eef3f8;
+	
+	/*
+	background-color: #f0f6fa;
+	background-color: #f7f9fb;
+	background-color: #7395AE;
+	background-color: #eee2dc;
+	*/
+}
+
+#onglet .contenu_gestion
+{
+	width: 100%;
+	margin-top: 12px;
+	font-size:12px;
+
+	border: 1px solid #003366;
+	
+	-moz-border-radius: 0 5px 5px 5px;
+	border-radius: 0 5px 5px 5px;
+	-khtml-border-radius: 0 5px 5px 5px;
+	-webkit-border-radius: 0 5px 5px 5px;
+	
+	background-color: #fff;
+	background-image: url(../image/icones/lock_back.png);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+
+
+#onglet .info_img{margin-top: 0px;}
+#onglet .info_img p
+{
+	font-size: 10px;
+	color: #999;
+}
+#onglet .info_img p.red{color: #D94E31;}
+
+

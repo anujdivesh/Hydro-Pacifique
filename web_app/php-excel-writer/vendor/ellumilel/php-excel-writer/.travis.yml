@@ -1,0 +1,29 @@
+language: php
+php:
+  - 5.6
+  - 7.0
+  - 7.1
+  - 7.2
+  - 7.3
+  - 7.4
+  - nightly
+
+matrix:
+  include:
+    - php: '5.4'
+      dist: trusty
+    - php: '5.5'
+      dist: trusty
+  fast_finish: true
+
+sudo: false
+
+before_script:
+  - composer self-update
+  - composer install --prefer-source --dev
+  - phpenv global "$TRAVIS_PHP_VERSION"
+script: ./vendor/bin/phpunit --configuration test/phpunit.xml
+
+notifications:
+  email:
+    - ozy@mailserver.ru

@@ -1,0 +1,105 @@
+/*  
+----------------------------------------
+Copyright (c) 2024 - Vai-Natura
+----------------------------------------
+*/				
+
+/* ---------------------------------------- */
+/* LEGEND MAP pour la Carte Interactive */
+
+.legend
+{
+
+	background-color: white;
+	padding: 10px;
+	padding-top: 0px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.legend h4 {                
+	width: 220px;
+	margin-top: 0px;
+}
+
+.legend-item {                      
+	text-align:left;           
+	width: 220px;
+	margin-bottom: 5px;
+	font-size: 11px;
+}
+.legend-item img {
+	width: 15px;
+	margin-right:10px;
+}
+
+
+/* ---------------------------------------- */
+/* TOOLTIP MAP pour la Carte Interactive */
+
+.tooltip-map
+{
+    /*width:250px;*/
+    /*height:150px;*/
+
+    text-align:left;
+
+	/*
+	background-color: white;
+	border-radius: 15px;
+	*/
+}
+
+.tooltip-map h2 
+{                
+	width:100%;
+    margin-bottom:5px;
+    padding: 10px 0;
+    
+    background-color: #070F2B;
+    border-top-left-radius: 5px;  /* Arrondi du coin supérieur gauche */
+    border-top-right-radius: 5px; /* Arrondi du coin supérieur droit */
+}
+.tooltip-map h2 span 
+{                
+	margin-left:10px;
+	font-size: 16px;
+    color:#fff;
+}
+
+
+.tooltip-item
+{
+    margin: 10px;
+}
+
+.tooltip-item p 
+{                
+	margin: 0 10px;
+
+    margin:0px;
+    
+    color:#000;
+}
+
+.tooltip-item span 
+{                
+	font-weight: bold;
+}
+
+
+.tooltip-ligne
+{
+    height: 2px; /* Hauteur de la ligne */
+    margin: 10px 0;
+    background-color: #51829B; /* Couleur de la ligne */
+}
+
+
+/* ---------------------------------------- */
+/* Stats dans la Carte Interactive */
+table#tab_stat_map
+{
+	text-align: center;
+	border: 1px solid #000;
+}

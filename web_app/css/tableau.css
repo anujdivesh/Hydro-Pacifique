@@ -1,0 +1,147 @@
+/*  
+----------------------------------------
+Copyright (c) 2015 - Vai-Natura
+----------------------------------------
+*/
+
+
+table
+{
+	text-align: left;	
+	/*background-color: #fff;*/
+}
+
+
+
+
+/* tableaux dynamiques avec tri auto */
+
+table#table_tri, table#table_import_chron
+{		
+	font-size:10px;
+  	margin:0;
+	margin-left:5px;
+	border:0px;
+	
+}
+
+
+/* ligne titre */
+table#table_tri thead, table#table_import_chron thead
+{	
+	font-weight:normal;
+		
+	text-align: left;	
+	color:#2175c1;
+
+	/*background-color: #195c8f;*/
+	
+}
+ /* Figer la ligne titre */
+table#table_tri tr.header-row, table#table_import_chron tr.header-row
+{		
+	position: sticky;
+	position: -webkit-sticky; /* Safari */
+	top: 0;
+	background-color: white; /* Fond blanc pour la visibilité */
+}
+
+
+.table-container /* Pour rendre le taleau défilant */
+{
+	float:left;
+	width: 100%;
+	height: 65vh; /* Hauteur fixe ou proportionnelle */
+	overflow-y: auto; /* Activer le défilement vertical automatique */
+}
+
+table th
+{
+	height: 20px;
+	
+	text-align: left;
+	font-size: 12px;
+	font-weight:bold;
+	color:#054b96;
+	
+	border-bottom:1px solid #ccc;
+	
+	/*
+	background-image: url(../image/table_top.png);
+	background-repeat:repeat-x;
+	*/
+}
+
+table th.small{font-size: 11px;}
+
+
+table#table_tri th.center
+{	
+	text-align: center;	
+}
+table#table_tri th.center img{width: 20px;}
+
+
+/* contenu */
+table.op_plus{width: 100%;display:none;}
+
+
+table#table_tri tr.row1{background:none;}
+table#table_tri tr.row2{background-color: #f3f4fa;}
+
+/*table#table_tri tr.row2{background-color: #fff;}*/
+
+/*table#table_tri tr.row1hover, tr.row2hover{background-color: #EAEDED;}*/
+table#table_tri tr.row1hover, tr.row2hover, tr.rowSelect{background-color: #ffeead;}
+table#table_tri tr.rowSelect{background-color: #FF7777;}
+table#table_tri tr.rowSelectdata{background-color: #C54C82;}
+
+
+table#table_tri td
+{
+	height: 30px;
+	text-align: left;	
+}
+table#table_tri td.lignevide{height: 10px;}
+table#table_tri td.small{height: 20px;}
+
+table#table_tri td.t_photo
+{
+	width: 20%;
+	text-align: center;	
+}
+table#table_tri td.t_photo img{width: 20px;}
+
+
+table#table_tri td.t_cont{width:100px;}
+
+table#table_tri td.t_cont_xxl{width:350px;}
+table#table_tri td.t_cont_xl{width:280px;}
+table#table_tri td.t_cont_l{width:200px;}
+table#table_tri td.t_cont_m{width:130px;}
+table#table_tri td.t_cont_s{width:80px;}
+table#table_tri td.t_cont_xs{width:50px;}
+
+
+table#table_tri td.t_icon
+{
+	width: 40px;
+	text-align: center;
+}
+
+table#table_tri td.t_icon img
+{
+	margin: 0 auto;
+}
+
+table#table_tri td.titre
+{
+	width: 150px;
+	height: 80px;
+	font-weight: bold;
+	text-align: left;
+}
+
+
+
+
