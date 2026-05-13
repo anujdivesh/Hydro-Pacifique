@@ -34,10 +34,10 @@ define('SESSION_TIMEOUT', 10000); // durée d'une session sans activité
 // WAMP - LOCAL 
 
 
-define('DB_SERVER', 'localhost'); // eg, localhost - should not be empty for productive servers
-define('DB_SERVER_USERNAME', 'root'); // utilisateur de la base de données
-define('DB_SERVER_PASSWORD', ''); 
-define('DB_DATABASE', 'hp-data-demo-spc'); // nom de la base de données
+define('DB_SERVER', getenv('DB_SERVER') ?: 'localhost'); // eg, localhost - should not be empty for productive servers
+define('DB_SERVER_USERNAME', getenv('DB_SERVER_USERNAME') ?: 'root'); // utilisateur de la base de données
+define('DB_SERVER_PASSWORD', getenv('DB_SERVER_PASSWORD') !== false ? getenv('DB_SERVER_PASSWORD') : ''); 
+define('DB_DATABASE', getenv('DB_DATABASE') ?: 'hp-data-demo-spc'); // nom de la base de données
 
 //----------------
 
