@@ -10,6 +10,7 @@ services:
     ports:
       - "8084:80"
     environment:
+      APP_URL: ${APP_URL:-http://localhost:8084/}
       DB_SERVER: db
       DB_SERVER_USERNAME: root
       DB_SERVER_PASSWORD: ""

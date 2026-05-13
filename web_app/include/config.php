@@ -20,9 +20,13 @@ define('INIT_T', 'Pacific'); // doit correspondre à geo_territoire.init_territo
 define('TITLE_SERVICE', 'Davar - Service De l\'Eau (DSE)'); // Variable Globale pour le service en charge de la plateforme
 
 // Valeur pour connexions au Serveur
-$http_scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$http_host = $_SERVER['HTTP_HOST'] ?? '';
-define('HTTP_SERVER', $http_host !== '' ? $http_scheme . '://' . $http_host . '/' : 'http://hydropacifique-nc/'); // adresse exacte du site 
+$app_url = getenv('APP_URL');
+$forwarded_proto = $_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '';
+$forwarded_host = $_SERVER['HTTP_X_FORWARDED_HOST'] ?? '';
+$http_scheme = $forwarded_proto !== '' ? explode(',', $forwarded_proto)[0] : ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http');
+$http_host = $forwarded_host !== '' ? explode(',', $forwarded_host)[0] : ($_SERVER['HTTP_HOST'] ?? '');
+$http_server = $app_url ?: ($http_host !== '' ? $http_scheme . '://' . trim($http_host) . '/' : 'http://hydropacifique-nc/');
+define('HTTP_SERVER', rtrim($http_server, '/') . '/'); // adresse exacte du site 
 //define('HTTP_SERVER', 'http://hydropacifique-pf/'); // adresse exacte du site 
 define('DIR_WS_ADMIN', ''); // 
 define('SESSION_TIMEOUT', 10000); // durée d'une session sans activité
