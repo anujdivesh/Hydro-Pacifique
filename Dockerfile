@@ -4,6 +4,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
+        libonig-dev \
         libpng-dev \
         libzip-dev \
         libicu-dev \
